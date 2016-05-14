@@ -3,7 +3,11 @@
 
 This project crawls and parses weekly newsletters created by [androidweekly.net](http://androidweekly.net/), which is a free newsletter that helps you to stay cutting-edge with your Android Development.
 
-It not only parses the post items in one weekly issue, but also extracts the main content of each post item's web page for you.
+It not only parses the post items in one weekly issue, but also extracts the main content of each post item's web page for you. 
+
+**Notice that only weekly issues later than issue #103 are parsed since older weekly issues have diffrent DOM tree of web page and less helper for current Android development.**
+
+If you want to parse older weekly issues, you can add these code in `src/main/java/data/AndroidWeeklyNetParser.java`
 
 ## Two main models
 
@@ -13,8 +17,8 @@ It not only parses the post items in one weekly issue, but also extracts the mai
 
 ## How to use
 
-1.Run `src/main/java/data/AndroidWeeklyNetCrawler`;
-2.Run `src/main/java/data/AndroidWeeklyNetParser`;
+1.Run `src/main/java/data/AndroidWeeklyNetCrawler.java`;
+2.Run `src/main/java/data/AndroidWeeklyNetParser.java`;
 3.Then you will see the result data in file `src/main/resources/androidweeklynet.json` in JSON format.
 
 ## The result data
@@ -72,7 +76,7 @@ Run `src/main/java/web/WebServer.java` and open `http://0.0.0.0:4567/` in your b
 
 Many famous open source libraries are used in this project, such as `crawler4j`, `fastjson`,`jsoup`,`velocity`,`spark`, etc.
 
-Two tools are much more important, one is [dragnet](https://github.com/seomoz/dragnet), it's a Python library used to extract the content of a web page. The other is [sessiondb](https://github.com/ctriposs/sessdb), which is a Big, Fast, Persistent Key/Value Store based on a variant of LSM, you can find more about it [here](http://ctriposs.github.io/sessdb/).
+Two tools are much more important, one is [dragnet](https://github.com/seomoz/dragnet), which is a Python library used to extract the content of a web page. The other is [sessiondb](https://github.com/ctriposs/sessdb), which is a Big, Fast, Persistent Key/Value Store based on a variant of LSM, you can find more about it [here](http://ctriposs.github.io/sessdb/).
 
 ## License
 

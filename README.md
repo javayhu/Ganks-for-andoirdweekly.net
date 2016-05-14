@@ -3,7 +3,7 @@
 
 This project crawls and parses weekly newsletters created by [androidweekly.net](http://androidweekly.net/), which is a free newsletter that helps you to stay cutting-edge with your Android Development.
 
-It not only parses the post items in one weekly issue, but also extracts the main content of each post item's web page for you. 
+It not only parses the post items in one weekly issue, but also extracts the main content of each post item's web page for you.
 
 **Notice that only weekly issues later than issue #103 are parsed since older weekly issues have diffrent DOM tree of web page and less helper for current Android development.**
 
@@ -16,6 +16,12 @@ If you want to parse older weekly issues, you can add these code in `src/main/ja
 2. `WeeklyItem` represents a weekly post item, eg, `More Than a Lot of Google Maps Markers`
 
 ## How to use
+
+(1) Simply use file `src/main/resources/androidweeklynet.json` as the result data, but it is not always updated!!!
+
+The last weekly issue is issue-204 for now.
+
+(2) Build and run the following two java files with Maven or in your favorite IDE.
 
 1.Run `src/main/java/data/AndroidWeeklyNetCrawler.java`;
 2.Run `src/main/java/data/AndroidWeeklyNetParser.java`;
@@ -72,9 +78,9 @@ Run `src/main/java/web/WebServer.java` and open `http://0.0.0.0:4567/` in your b
 
 ![image](androidweeklynet.png)
 
-## The libraries used 
+## The libraries used
 
-Many famous open source libraries are used in this project, such as `crawler4j`, `fastjson`,`jsoup`,`velocity`,`spark`, etc.
+Many famous open source libraries are used in this project, including `crawler4j`, `fastjson`,`jsoup`,`velocity` and `spark`.
 
 Two tools are much more important, one is [dragnet](https://github.com/seomoz/dragnet), which is a Python library used to extract the content of a web page. The other is [sessiondb](https://github.com/ctriposs/sessdb), which is a Big, Fast, Persistent Key/Value Store based on a variant of LSM, you can find more about it [here](http://ctriposs.github.io/sessdb/).
 

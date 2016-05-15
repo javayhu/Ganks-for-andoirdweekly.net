@@ -1,5 +1,5 @@
 
-# Android Weekly Net
+# Ganks for androidweekly.net
 
 This project crawls and parses weekly newsletters created by [androidweekly.net](http://androidweekly.net/), which is a free newsletter that helps you to stay cutting-edge with your Android Development.
 

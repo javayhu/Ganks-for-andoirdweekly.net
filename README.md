@@ -17,14 +17,22 @@ If you want to parse older weekly issues, you can add these code in `src/main/ja
 
 ## How to use
 
-(1) Simply use file `src/main/resources/androidweeklynet.json` as the result data, but it is not always updated!!!
+(1) Simply use file `src/main/resources/androidweeklynet.json` as the result data, but it will not autoupdate, the latest weekly issue in this json file is issue-204 for now.
 
-The last weekly issue is issue-204 for now.
+(2) Using Maven to compile and run this project
 
-(2) Build and run the following two java files with Maven or in your favorite IDE.
+1.Run `mvn compile` to compile this project;  
 
-1.Run `src/main/java/data/AndroidWeeklyNetCrawler.java`;
-2.Run `src/main/java/data/AndroidWeeklyNetParser.java`;
+2.Run `mvn exec:java -Dexec.mainClass="data.AndroidWeeklyNetCrawler"` to start crawling and caching the web pages;
+
+3.Run `mvn exec:java -Dexec.mainClass="data.AndroidWeeklyNetParser"` to start parsing these web pages and generate the final result data.
+
+(3) Build and run this project in your favorite IDE
+
+1.Run `src/main/java/data/AndroidWeeklyNetCrawler.java`;  
+
+2.Run `src/main/java/data/AndroidWeeklyNetParser.java`;  
+
 3.Then you will see the result data in file `src/main/resources/androidweeklynet.json` in JSON format.
 
 ## The result data
@@ -33,7 +41,7 @@ The root of the json data is a JSON array containing all the weekly issues poste
 
 `items` in each weekly issue stands for the post items in this issue, and each item has its `url`、`summary`、`content`, etc.
 
-```
+```json
 [
 	{
 		"file":"src/main/resources/androidweeklynetarchive/80.html",
@@ -80,7 +88,7 @@ Run `src/main/java/web/WebServer.java` and open `http://0.0.0.0:4567/` in your b
 
 ## The libraries used
 
-Many famous open source libraries are used in this project, including `crawler4j`, `fastjson`,`jsoup`,`velocity` and `spark`.
+Many famous open source libraries are used in this project, including `crawler4j`,  `fastjson`, `jsoup`, `velocity`, `spark` and so on.
 
 Two tools are much more important, one is [dragnet](https://github.com/seomoz/dragnet), which is a Python library used to extract the content of a web page. The other is [sessiondb](https://github.com/ctriposs/sessdb), which is a Big, Fast, Persistent Key/Value Store based on a variant of LSM, you can find more about it [here](http://ctriposs.github.io/sessdb/).
 

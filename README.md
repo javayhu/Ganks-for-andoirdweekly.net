@@ -17,9 +17,9 @@ If you want to parse older weekly issues, you can add these code in `src/main/ja
 
 ## How to use
 
-(1) Simply use file `src/main/resources/androidweeklynet.json` as the result data, but it will not autoupdate, the latest weekly issue in this json file is issue-204 for now.
+(1) Simply use file `src/main/resources/androidweeklynet.json` as the result data, but it will not auto update, the latest weekly issue in this json file is issue-204 for now.
 
-(2) Using Maven to compile and run this project
+(2) Compile and run this project with Maven (it may take some hours)
 
 1.Run `mvn compile` to compile this project;  
 
@@ -27,7 +27,9 @@ If you want to parse older weekly issues, you can add these code in `src/main/ja
 
 3.Run `mvn exec:java -Dexec.mainClass="data.AndroidWeeklyNetParser"` to start parsing these web pages and generate the final result data.
 
-(3) Build and run this project in your favorite IDE
+4.Then you will see the result data in file `src/main/resources/androidweeklynet.json` in JSON format.
+
+(3) Build and run this project in your favorite IDE (it may take some hours)
 
 1.Run `src/main/java/data/AndroidWeeklyNetCrawler.java`;  
 
@@ -73,7 +75,7 @@ The root of the json data is a JSON array containing all the weekly issues poste
         "title":"Android Weekly Issue #204",
         "url":"http://androidweekly.net/issues/issue-204"
     },
-...
+    ...
 ]
 ```
 
@@ -82,7 +84,9 @@ The root of the json data is a JSON array containing all the weekly issues poste
 The simple website included in this project is just a page showing the statistics information about the result data.    
 You can find out more interesting usages with the result data, such as a powerful search engine based on these data, which in still under development in my other project.  
 
-Run `mvn exec:java -Dexec.mainClass="web.WebServer"` and open `http://0.0.0.0:4567/` in your browser, you will see this web page.
+1.Run `mvn exec:java -Dexec.mainClass="web.WebServer"` 
+ 
+2.Open `http://0.0.0.0:4567/` in your browser, and you will see this web page.
 
 ![image](androidweeklynet.png)
 

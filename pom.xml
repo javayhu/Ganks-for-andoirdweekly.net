@@ -5,12 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.hujiaweibujidao</groupId>
-    <artifactId>weeklyhub</artifactId>
+    <artifactId>ganks.androidweekly.net</artifactId>
     <version>1.0</version>
 
-    <name>weeklyhub</name>
-    <description>Central Hub for Weekly Newsletters</description>
-    <url>http://weeklyhub.github.io</url>
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>

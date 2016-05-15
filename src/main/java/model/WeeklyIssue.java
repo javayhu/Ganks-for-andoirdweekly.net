@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 一期周报（或者日报）
+ * 一期干货
  * <p>
  * hujiawei 16/4/28
  */
@@ -15,7 +15,7 @@ public class WeeklyIssue {
     private String url;//网址
     private String title;//标题
     private String file;//文件路径
-    private List<WeeklyItem> items;//周报中的item列表
+    private List<WeeklyItem> items;//日报中的item列表
 
     public WeeklyIssue() {
         this.items = new ArrayList<WeeklyItem>();

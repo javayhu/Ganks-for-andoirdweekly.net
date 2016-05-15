@@ -82,7 +82,7 @@ The root of the json data is a JSON array containing all the weekly issues poste
 The simple website included in this project is just a page showing the statistics information about the result data.    
 You can find out more interesting usages with the result data, such as a powerful search engine based on these data, which in still under development in my other project.  
 
-Run `src/main/java/web/WebServer.java` and open `http://0.0.0.0:4567/` in your browser, you will see this web page.
+Run `mvn exec:java -Dexec.mainClass="web.WebServer"` and open `http://0.0.0.0:4567/` in your browser, you will see this web page.
 
 ![image](androidweeklynet.png)
 

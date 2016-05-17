@@ -11,11 +11,11 @@ If you want to parse older weekly issues, you can add these code in `src/main/ja
 
 This project also provides a web search API based on Lucene and these ganks, and the web application is now deployed on Heroku platform. [see the site](http://gawn.herokuapp.com/)   
 
-Since I'm currently in free plan of Heroku, so this site is 16/24 housr available, good luck! 
+Since I'm currently in free plan of Heroku, so this site is 16/24 housr available, good luck!
 
 **中文简介：`Ganks for androidweekly.net`项目利用crawl4j、jsoup等开源工具来抓取并解析[Android开发周报 androidweekly.net](http://androidweekly.net/)中的干货列表，不仅如此，该项目还利用dragnet开源工具提取每一个干货的目标网页内容，项目内置了一个小型web应用显示干货数据的统计信息，并将其部署在Heroku平台。**
 
-**目前我的Heroku账号处于free plan，所以应用每24个小时会有8个小时处于停止状态，所以祝你好运！**
+**目前我的Heroku账号处于free plan，所以应用每24个小时会有几个小时处于停止状态，所以祝你好运！**
 
 ## Two main models
 
@@ -87,15 +87,15 @@ The root of the json data is a JSON array containing all the weekly issues poste
 ]
 ```
 
-## The website included 
+## The website included
 
 The website included is deployed to Heroku, [see the preview site](http://gawn.herokuapp.com/).
 
 The simple website included in this project is just a page showing the statistics information about the result data.    
 You can find out more interesting usages with the result data, such as a powerful search engine based on these data, which in still under development in my other project.  
 
-1.Run `mvn exec:java -Dexec.mainClass="web.WebServer"` 
- 
+1.Run `mvn exec:java -Dexec.mainClass="web.WebServer"`
+
 2.Open `http://0.0.0.0:4567/` in your browser, and you will see this web page.
 
 ![image](androidweeklynet.png)

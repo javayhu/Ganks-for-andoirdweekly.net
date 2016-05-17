@@ -9,7 +9,7 @@ It not only parses the post items in one weekly issue, but also extracts the mai
 
 If you want to parse older weekly issues, you can add these code in `src/main/java/data/AndroidWeeklyNetParser.java`
 
-This project also provides a web search API based on Lucene and these ganks, and the web application is now deployed on Heroku platform. [see the site](http://ganks-for-androidweeklynet.herokuapp.com/)   
+This project also provides a web search API based on Lucene and these ganks, and the web application is now deployed on Heroku platform. [see the site](http://gawn.herokuapp.com/)   
 
 Since I'm currently in free plan of Heroku, so this site is 16/24 housr available, good luck! 
 
@@ -89,7 +89,7 @@ The root of the json data is a JSON array containing all the weekly issues poste
 
 ## The website included 
 
-The website included is deployed to Heroku, [see the preview site](http://ganks-for-androidweeklynet.herokuapp.com/).
+The website included is deployed to Heroku, [see the preview site](http://gawn.herokuapp.com/).
 
 The simple website included in this project is just a page showing the statistics information about the result data.    
 You can find out more interesting usages with the result data, such as a powerful search engine based on these data, which in still under development in my other project.  

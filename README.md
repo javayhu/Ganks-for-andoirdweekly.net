@@ -17,6 +17,8 @@ Since I'm currently in free plan of Heroku, so this site is 16/24 housr availabl
 
 **目前我的Heroku账号处于free plan，所以应用每24个小时会有几个小时处于停止状态，所以祝你好运！**
 
+如果你对我的开发工作感兴趣的话记得在Github上Follow我哟，或者关注[我的博客](http://hujiaweibujidao.github.io/)。
+
 ## Two main models
 
 1. `WeeklyIssue` represents a weekly issue, eg, `Android Weekly Issue #80`

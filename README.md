@@ -13,7 +13,7 @@ This project also provides a web search API based on Lucene and these ganks, and
 
 Since I'm currently in free plan of Heroku, so this site is 16/24 housr available, good luck! 
 
-**中文简介：`Ganks for androidweekly.net`项目利用Crawl4j爬虫工具来抓取并解析[Android开发周报](http://androidweekly.net/)中的干货列表，不仅如此，该项目还利用dragnet开源工具提取每一个干货的目标网页内容，项目内置了一个小型web应用显示统计数据，并将其部署在Heroku平台。**
+**中文简介：`Ganks for androidweekly.net`项目利用crawl4j、jsoup等开源工具来抓取并解析[Android开发周报 androidweekly.net](http://androidweekly.net/)中的干货列表，不仅如此，该项目还利用dragnet开源工具提取每一个干货的目标网页内容，项目内置了一个小型web应用显示干货数据的统计信息，并将其部署在Heroku平台。**
 
 **目前我的Heroku账号处于free plan，所以应用每24个小时会有8个小时处于停止状态，所以祝你好运！**
 
@@ -104,7 +104,7 @@ You can find out more interesting usages with the result data, such as a powerfu
 
 Many famous open source libraries are used in this project, including `crawler4j`,  `fastjson`, `jsoup`, `velocity`, `spark` and so on.
 
-Two tools are much more important, one is [dragnet](https://github.com/seomoz/dragnet), which is a Python library used to extract the content of a web page. The other is [sessiondb](https://github.com/ctriposs/sessdb), which is a Big, Fast, Persistent Key/Value Store based on a variant of LSM, you can find more about it [here](http://ctriposs.github.io/sessdb/).
+Two tools are much more important, one is [dragnet](https://github.com/seomoz/dragnet), which is a Python library used to extract the content of a web page. The other is [sessiondb](https://github.com/ctriposs/sessdb), which is a Big, Fast, Persistent Key/Value Store based on a variant of LSM, you can find out more details about it [here](http://ctriposs.github.io/sessdb/).
 
 ## License
 

@@ -14,8 +14,8 @@ public class DataHelper {
 
     static Logger logger = LoggerFactory.getLogger(DataHelper.class);
 
-    public static final String ANDROIDWEEKLYNET_JSON = "src/main/resources/androidweeklynet.json";
-    public static final String ANDROIDWEEKLYNET_EXCEL = "src/main/resources/androidweeklynet.xlsx";
+    public static final String ANDROIDWEEKLYNET_JSON = "src/main/resources/data/androidweeklynet.json";
+    public static final String ANDROIDWEEKLYNET_EXCEL = "src/main/resources/data/androidweeklynet.xlsx";
 
     /**
      * 保存网页内容

@@ -13,7 +13,7 @@ This project also provides a web search API based on Lucene and these ganks, and
 
 Since I'm currently in free plan of Heroku, so this site is 16/24 housr available, good luck!
 
-**中文简介：`Ganks for androidweekly.net`项目利用crawl4j、jsoup等开源工具来抓取并解析[Android开发周报 androidweekly.net](http://androidweekly.net/)中的干货列表，不仅如此，该项目还利用dragnet开源工具提取每一个干货的目标网页内容，项目内置了一个小型web应用显示干货数据的统计信息，并将其部署在Heroku平台。**
+**中文简介：`Ganks for androidweekly.net`项目利用[crawler4j](https://github.com/yasserg/crawler4j)、[jsoup](https://github.com/jhy/jsoup)等开源工具来抓取并解析[Android开发周报 androidweekly.net](http://androidweekly.net/)中的干货列表，不仅如此，该项目还利用[dragnet](https://github.com/seomoz/dragnet)开源工具提取每一个干货的目标网页内容，项目内置了一个小型web应用显示干货数据的统计信息，并将其部署在[Heroku](https://www.heroku.com/)平台。**
 
 **目前我的Heroku账号处于free plan，所以应用每24个小时会有几个小时处于停止状态，所以祝你好运！**
 

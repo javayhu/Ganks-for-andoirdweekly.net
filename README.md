@@ -1,3 +1,4 @@
+[![Heroku](https://heroku-badge.herokuapp.com/?app=gawn&style=flat&svg=1)](http://gawn.herokuapp.com/)
 
 # Ganks for androidweekly.net
 
@@ -11,7 +12,7 @@ If you want to parse older weekly issues, you can add these code in `src/main/ja
 
 This project also provides a web search API based on Lucene and these ganks, and the web application is now deployed on Heroku platform. [see the site](http://gawn.herokuapp.com/)   
 
-Since I'm currently in free plan of Heroku, so this site is 16/24 housr available, good luck!
+Since I'm currently in free plan of Heroku, so this site is 18/24 housr available, good luck!
 
 **中文简介：`Ganks for androidweekly.net`项目利用[crawler4j](https://github.com/yasserg/crawler4j)、[jsoup](https://github.com/jhy/jsoup)等开源工具来抓取并解析[Android开发周报 androidweekly.net](http://androidweekly.net/)中的干货列表，不仅如此，该项目还利用[dragnet](https://github.com/seomoz/dragnet)开源工具提取每一个干货的目标网页内容，项目内置了一个小型web应用显示干货数据的统计信息，并将其部署在[Heroku](https://www.heroku.com/)平台。**
 
@@ -88,6 +89,10 @@ The root of the json data is a JSON array containing all the weekly issues poste
     ...
 ]
 ```
+
+An Excel format result data is also provided for you to quickly watch through.
+
+![img](androidweeklynet-excel.png)
 
 ## The website included
 

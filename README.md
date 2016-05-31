@@ -15,20 +15,34 @@ This project also provides a web search API based on Lucene and these ganks, and
 Since I'm currently in free plan of Heroku, so this site is 18/24 housr available, good luck!
 
 **中文简介：`Ganks for androidweekly.net`项目利用[crawler4j](https://github.com/yasserg/crawler4j)、[jsoup](https://github.com/jhy/jsoup)等开源工具来抓取并解析[Android开发周报 androidweekly.net](http://androidweekly.net/)中的干货列表，不仅如此，该项目还利用[dragnet](https://github.com/seomoz/dragnet)开源工具提取每一个干货的目标网页内容，项目内置了一个小型web应用显示干货数据的统计信息，并将其部署在[Heroku](https://www.heroku.com/)平台。**    
-**目前我的Heroku账号处于free plan，所以应用每24个小时会有几个小时处于停止状态，所以祝你好运！**     
 如果你对我的开发工作感兴趣的话记得在Github上Follow我哟，或者关注[我的博客](http://hujiaweibujidao.github.io/)    
 
-## Two main models
+## The website included
 
-1. `WeeklyIssue` represents a weekly issue, eg, `Android Weekly Issue #80`
+The website included is deployed to Heroku, [see the preview site](http://gawn.herokuapp.com/).
 
-2. `WeeklyItem` represents a weekly post item, eg, `More Than a Lot of Google Maps Markers`
+The simple website included in this project is just a page showing the statistics information about the result data.    
+You can find out more interesting usages with the result data, such as a powerful search engine based on these data, which in still under development in my other project.  
+
+1.Run `mvn exec:java -Dexec.mainClass="web.WebServer"`
+
+2.Open `http://0.0.0.0:4567/` in your browser, and you will see this web page.
+
+![image](androidweeklynet.png)
+
+## Set up
+
+Please make sure you have Java、Maven and Python installed.
 
 ## How to use
 
-### Option 1
+### Option 0
 
 Simply use file `src/main/resources/androidweeklynet.json` as the result data, but it will not be auto-updated.
+
+### Option 1
+
+Simply run `update.sh` to get the result data.
 
 ### Option 2
 
@@ -51,6 +65,12 @@ Build and run this project in your favorite IDE (it may take some hours)
 2.Run `src/main/java/data/AndroidWeeklyNetParser.java`;  
 
 3.Then you will see the result data in file `src/main/resources/androidweeklynet.json` in JSON format.
+
+## Two main models
+
+1. `WeeklyIssue` represents a weekly issue, eg, `Android Weekly Issue #80`
+
+2. `WeeklyItem` represents a weekly post item, eg, `More Than a Lot of Google Maps Markers`
 
 ## The result data
 
@@ -97,19 +117,6 @@ The root of the json data is a JSON array containing all the weekly issues poste
 An Excel format result data is also provided for you to quickly look through.
 
 ![img](androidweeklynet-excel.png)
-
-## The website included
-
-The website included is deployed to Heroku, [see the preview site](http://gawn.herokuapp.com/).
-
-The simple website included in this project is just a page showing the statistics information about the result data.    
-You can find out more interesting usages with the result data, such as a powerful search engine based on these data, which in still under development in my other project.  
-
-1.Run `mvn exec:java -Dexec.mainClass="web.WebServer"`
-
-2.Open `http://0.0.0.0:4567/` in your browser, and you will see this web page.
-
-![image](androidweeklynet.png)
 
 ## The libraries used
 

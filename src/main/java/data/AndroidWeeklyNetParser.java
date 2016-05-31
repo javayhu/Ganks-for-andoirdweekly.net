@@ -69,10 +69,10 @@ public class AndroidWeeklyNetParser {
         if (flag) {//如果issues有修改才重新生成json和excel文件
             logger.info("write issues to json file");
             JSON.writeJSONStringTo(issues, new FileWriter(DataHelper.ANDROIDWEEKLYNET_JSON), SerializerFeature.PrettyFormat);
-
-            //logger.info("write issues to excel file");//数据量过大会导致保存失败，所以取消保存到excel文件中
-            //writeWeeklyItems2Excel(issues, DataHelper.ANDROIDWEEKLYNET_EXCEL);//写入到excel表中，便于查看
         }
+
+        //logger.info("write issues to excel file");//数据量过大会导致保存失败，所以取消保存到excel文件中
+        //writeItems2Excel(issues, DataHelper.ANDROIDWEEKLYNET_EXCEL);//写入到excel表中，便于查看
 
         cachedb.close();
     }
@@ -151,7 +151,7 @@ public class AndroidWeeklyNetParser {
      * @param issues   周报列表
      * @param filePath excel文件路径
      */
-    private void writeWeeklyItems2Excel(List<WeeklyIssue> issues, String filePath) throws IOException {
+    private void writeItems2Excel(List<WeeklyIssue> issues, String filePath) throws IOException {
         List<WeeklyItem> items = new ArrayList<WeeklyItem>();
         for (WeeklyIssue issue : issues) {
             items.addAll(issue.getItems());
@@ -159,7 +159,7 @@ public class AndroidWeeklyNetParser {
 
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = workbook.createSheet("androidweeklynet");
-        String[] heads = new String[]{"id", "source", "type", "title", "shorturl", "tags", "url", "summary", "content"};
+        String[] heads = new String[]{"id", "source", "type", "title", "shorturl", "tags", "url", "summary"};//"content"
         Row headRow = sheet.createRow(0);
 
         for (int i = 0; i < heads.length; i++) {
@@ -197,9 +197,9 @@ public class AndroidWeeklyNetParser {
                     case 7:
                         cell.setCellValue(item.getSummary());
                         break;
-                    case 8:
-                        cell.setCellValue(item.getContent());
-                        break;
+                    //case 8:
+                    //    cell.setCellValue(item.getContent());
+                    //    break;
                 }
             }
         }
@@ -218,16 +218,10 @@ public class AndroidWeeklyNetParser {
         long startTime = System.currentTimeMillis();
 
         try {
-            //File file = new File("src/main/resources/androidweeklynetarchive/103.html");
-            //new AndroidWeeklyNetParser().parseIssue(file);
-
-            //AndroidWeeklyNetCrawler.FOLDER_CACHE = "src/main/resources/androidweeklytest/";
             AndroidWeeklyNetCrawler crawler = new AndroidWeeklyNetCrawler();
             List<WeeklyIssue> issueList = crawler.restoreIssues();
 
-            //new AndroidWeeklyNetParser().saveIssues(issueList);
             new AndroidWeeklyNetParser().startParse(issueList);
-            //new AndroidWeeklyNetParser().startParse(issueList.subList(0, 10));//使用前10个测试
         } catch (IOException e) {
             e.printStackTrace();
         }

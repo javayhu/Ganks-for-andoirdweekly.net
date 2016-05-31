@@ -181,18 +181,11 @@ public class AndroidWeeklyNetCrawler extends WebCrawler {
 
         try {
             AndroidWeeklyNetCrawler crawler = new AndroidWeeklyNetCrawler();
-
-            //System.out.println(crawler.parseId("http://androidweekly.net/issues/issue-138-001"));
-            //System.out.println(crawler.parseId("http://androidweekly.net/issues/issue-43-birthday-issue"));
-            //System.out.println(crawler.parseId("http://androidweekly.net/issues/issue-108-1"));
-            //System.out.println(crawler.parseId("http://androidweekly.net/issues/issue-202"));
-
             crawler.startCrawl();
 
             //单线程和多线程耗时差不多，改为单线程形式
             //1 threads: 4 minutes 53 seconds
             //4 threads: 4 minutes 3 seconds
-
         } catch (Exception e) {
             e.printStackTrace();
         }

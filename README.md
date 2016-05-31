@@ -14,11 +14,9 @@ This project also provides a web search API based on Lucene and these ganks, and
 
 Since I'm currently in free plan of Heroku, so this site is 18/24 housr available, good luck!
 
-**中文简介：`Ganks for androidweekly.net`项目利用[crawler4j](https://github.com/yasserg/crawler4j)、[jsoup](https://github.com/jhy/jsoup)等开源工具来抓取并解析[Android开发周报 androidweekly.net](http://androidweekly.net/)中的干货列表，不仅如此，该项目还利用[dragnet](https://github.com/seomoz/dragnet)开源工具提取每一个干货的目标网页内容，项目内置了一个小型web应用显示干货数据的统计信息，并将其部署在[Heroku](https://www.heroku.com/)平台。**
-
-**目前我的Heroku账号处于free plan，所以应用每24个小时会有几个小时处于停止状态，所以祝你好运！**
-
-如果你对我的开发工作感兴趣的话记得在Github上Follow我哟，或者关注[我的博客](http://hujiaweibujidao.github.io/)。
+**中文简介：`Ganks for androidweekly.net`项目利用[crawler4j](https://github.com/yasserg/crawler4j)、[jsoup](https://github.com/jhy/jsoup)等开源工具来抓取并解析[Android开发周报 androidweekly.net](http://androidweekly.net/)中的干货列表，不仅如此，该项目还利用[dragnet](https://github.com/seomoz/dragnet)开源工具提取每一个干货的目标网页内容，项目内置了一个小型web应用显示干货数据的统计信息，并将其部署在[Heroku](https://www.heroku.com/)平台。**    
+**目前我的Heroku账号处于free plan，所以应用每24个小时会有几个小时处于停止状态，所以祝你好运！**     
+如果你对我的开发工作感兴趣的话记得在Github上Follow我哟，或者关注[我的博客](http://hujiaweibujidao.github.io/)    
 
 ## Two main models
 
@@ -28,9 +26,13 @@ Since I'm currently in free plan of Heroku, so this site is 18/24 housr availabl
 
 ## How to use
 
-(1) Simply use file `src/main/resources/androidweeklynet.json` as the result data, but it will not auto update, the latest weekly issue in this json file is issue-204 for now.
+### Option 1
 
-(2) Compile and run this project with Maven (it may take some hours)
+Simply use file `src/main/resources/androidweeklynet.json` as the result data, but it will not be auto-updated.
+
+### Option 2
+
+Compile and run this project with Maven (it may take some hours)
 
 1.Run `mvn compile` to compile this project;  
 
@@ -40,7 +42,9 @@ Since I'm currently in free plan of Heroku, so this site is 18/24 housr availabl
 
 4.Then you will see the result data in file `src/main/resources/androidweeklynet.json` in JSON format.
 
-(3) Build and run this project in your favorite IDE (it may take some hours)
+### Option 3
+
+Build and run this project in your favorite IDE (it may take some hours)
 
 1.Run `src/main/java/data/AndroidWeeklyNetCrawler.java`;  
 
@@ -90,7 +94,7 @@ The root of the json data is a JSON array containing all the weekly issues poste
 ]
 ```
 
-An Excel format result data is also provided for you to quickly watch through.
+An Excel format result data is also provided for you to quickly look through.
 
 ![img](androidweeklynet-excel.png)
 

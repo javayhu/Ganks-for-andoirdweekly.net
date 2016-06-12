@@ -135,11 +135,6 @@ public class DataHelper {
 
     public static void main(String[] args) {
         try {
-            //System.out.println(isIgnoredType("Videos & Podcasts"));
-            //System.out.println(isIgnoredType("Jobs"));
-            //System.out.println(isIgnoredType("Books"));
-            //System.out.println(isIgnoredUrl("https://google.com/"));
-
             System.out.println(DataHelper.extractContent("https://github.com/seomoz/dragnet"));
             //System.out.println(DataHelper.extractContent("https://moz.com/devblog/dragnet-content-extraction-from-diverse-feature-sets/"));
         } catch (Exception e) {
